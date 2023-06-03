@@ -1,0 +1,66 @@
+/* thankyou page */
+.header_wrap {
+    height: 160px;
+}
+
+.main {
+    max-width: 1000px;
+    padding: 60px 10%;
+    box-sizing: border-box;
+    margin: 0px auto 80px auto;
+    position: relative;
+
+}
+
+.thankyou_circle {
+    width: 320px;
+    height: 320px;
+    border-radius: 99rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0 auto;
+}
+
+
+.thankyou_p {
+    position: absolute;
+    text-align: center;
+    line-height: 1.8;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .main {
+        padding: 30px 10%;
+    }
+
+    .thankyou_circle {
+        width: 295px;
+        height: 295px;
+        margin: 30px auto;
+    }
+}
+
+.to_top_btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 99rem;
+    background-color: rgba(242, 232, 219, 0.4);
+    text-align: center;
+    line-height: 100px;
+    font-size: 14px;
+    position: absolute;
+    bottom: -80px;
+    left: 85%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 767px) {
+    .to_top_btn {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+    }
+}
