@@ -47,6 +47,12 @@ h1 {
         margin-top: 50px;
     }
 
+    h1 {
+        font-size: 14px;
+        color: #603813;
+        letter-spacing: 0.1em;
+    }
+
     .silhouette {
         width: 100%;
         max-width: 150px;

@@ -26,6 +26,7 @@ h1 {
     font-size: 20px;
     margin-top: -10px;
     letter-spacing: 0.3em;
+    color: #603813;
 }
 
 h2 {
@@ -48,6 +49,10 @@ h2 {
     .works01 {
         margin: 60px auto 60px auto;
         padding: 40px 5% 40px 5%;
+    }
+
+    h1 {
+        font-size: 14px;
     }
 
     h2 {

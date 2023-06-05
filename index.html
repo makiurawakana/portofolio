@@ -272,6 +272,25 @@
                 autoplay: true,
             });
         });
+
+
+        // fadein
+        function fadeAnime() {
+            $('.about, .works, .contact').each(function () { //.aboutが
+                var elemPos = $(this).offset().top - 100;//要素より、50px上の
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll >= elemPos - windowHeight) {
+                    $(this).addClass('fadeUp');// 画面内に入ったらfadeUpというクラス名を追記
+                } else {
+                    $(this).removeClass('fadeUp');// 画面外に出たらfadeUpというクラス名を外す
+                };
+            });
+        };
+
+        $(window).scroll(function () {
+            fadeAnime();
+        });
     </script>
 
     <!-- google formのjs -->

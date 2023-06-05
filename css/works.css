@@ -2,6 +2,7 @@ h1 {
     font-size: 20px;
     margin-top: -10px;
     letter-spacing: 0.3em;
+    color: #603813;
 }
 
 .works_index {
@@ -33,6 +34,10 @@ h2 {
     .works_index {
         margin-top: 90px;
         margin-bottom: 100px;
+    }
+
+    h1 {
+        font-size: 14px;
     }
 
     .works_index ul {

@@ -12,7 +12,7 @@
 // ハンバーガーメニュー
 $(function () {
   $('.sp_btn, .sp_nav li').on('click', function () {
-      $('.sp_nav').fadeToggle();
+      $('.sp_nav, .to_top_arrow').fadeToggle();
       $('.sp_btn').toggleClass('open');
   });
 });

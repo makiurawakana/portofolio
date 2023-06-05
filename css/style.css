@@ -45,7 +45,7 @@
 
 .mv_circle {
     position: absolute;
-    max-width: 400px;
+    width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -185,8 +185,9 @@
 }
 
 .scroll_dots span {
-    background-color: #edc9b9;
-    opacity: 0.2;
+    background-color: #a9897f;
+    ;
+    opacity: 0.1;
     width: 8px;
     height: 8px;
     margin: 8px 0px 0px 0px;
@@ -200,7 +201,7 @@
     }
 
     .scroll_wrap {
-        margin-top: -104px;
+        margin-top: -83px;
     }
 
 }
@@ -233,7 +234,7 @@
 
 @keyframes scroll_animation {
     0% {
-        opacity: 0.2;
+        opacity: 0.1;
     }
 
     100% {
@@ -271,7 +272,7 @@
     left: 10%;
 }
 
-.concept_lead_wrap {
+/* .concept_lead_wrap {
     position: relative;
     width: 560px;
     height: 560px;
@@ -281,6 +282,29 @@
     transform: translateX(-50%);
     font-weight: normal;
     margin-top: 90px;
+} */
+
+.concept_lead_wrap {
+    position: relative;
+    width: 560px;
+    height: 560px;
+    left: 68%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    margin-top: 90px;
+}
+
+.concept_lead_wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 560px;
+    height: 560px;
+    background-color: rgba(242, 232, 219, 0.4);
+    border-radius: 99rem;
+    animation: conceptanime_pc 2.5s ease 2.5s infinite alternate;
+    transform-origin: center;
 }
 
 .concept_lead {
@@ -295,6 +319,16 @@
     transform: translate(-50%, -50%);
 }
 
+/* 拡大縮小アニメーション */
+@keyframes conceptanime_pc {
+    from {
+        transform: scale(0.9, 0.9);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}
 
 @media screen and (max-width: 767px) {
 
@@ -308,7 +342,6 @@
         margin-top: 90px;
         overflow: visible;
     }
-
 
     .concept_lead_wrap {
         position: relative;
@@ -331,6 +364,19 @@
         height: 90vw;
         background-color: rgba(242, 232, 219, 0.4);
         border-radius: 99rem;
+        animation: conceptanime 2s ease 2s infinite alternate;
+        transform-origin: center;
+    }
+
+
+    @keyframes conceptanime {
+        from {
+            transform: translate(-50%, -50%) scale(0.9, 0.9);
+        }
+
+        to {
+            transform: translate(-50%, -50%) scale(1, 1);
+        }
     }
 
     .concept_lead {
@@ -741,7 +787,6 @@ h3::after {
     width: 25vw;
     max-width: 300px;
     margin: 0 auto;
-    padding: 20px 0;
     text-align: center;
 }
 
@@ -967,6 +1012,35 @@ h3::after {
     right: 70px;
 }
 
+
+/*fade upアニメーション */
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* js　画面に入る前の状態 */
+.about,
+.works,
+.contact {
+    opacity: 0;
+}
+
+
 @media screen and (max-width: 767px) {
     .about_bg {
         width: 100%;
@@ -996,7 +1070,7 @@ h3::after {
 
     .ttl_sub_about {
         font-size: 16px;
-        padding-bottom: 0px 0px 0px 60px;
+        padding: 0px 0px 60px 0px;
         text-align: center;
     }
 
@@ -1106,6 +1180,9 @@ input#send {
     transition: 0.5s;
     letter-spacing: 0.025em;
     color: #42210b;
+    font-family: "fot-tsukuardgothic-std", "ヒラギノ丸ゴ Pro W4",
+        "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3",
+        "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
 }
 
 .form_label {
